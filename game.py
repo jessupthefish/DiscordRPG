@@ -1,6 +1,8 @@
-import random, sys
+import sys
 from copy import deepcopy
 import discord
+import os
+import dotenv
 # from database_handler import RPGDatabase
 
 # db = RPGDatabase()
@@ -33,4 +35,6 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Bye!')
 
-client.run('MTE0NTc5NzQ3ODQwNzQ3MTIyNg.GzlS1j.uuZx0iCd8-G9jj6LMuOVoJbn81L3yx9ib1HKk8')
+load_dotenv()  # Load environment variables from .env file
+token = os.getenv('DISCORD_TOKEN')  # Retrieve the Discord token
+client.run(token)
