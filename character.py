@@ -14,7 +14,7 @@ class Character:
 
     def fight(self, other):
         defense = min(other.defense, 19)  # cap defense
-        chance_to_hit = random.randint(0, 20-defense)  # determine hit
+        chance_to_hit = random.randint(0, 20 - defense)  # determine hit
         if chance_to_hit:
             damage = self.attack
         else:
