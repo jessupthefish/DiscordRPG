@@ -2,7 +2,7 @@ import sys
 from copy import deepcopy
 import discord
 import os
-import dotenv
+from dotenv import load_dotenv
 # from database_handler import RPGDatabase
 
 # db = RPGDatabase()
